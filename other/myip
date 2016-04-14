@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# time wget http://ipecho.net/plain -O - -q; echo
+#time curl ipecho.net/plain; echo
+# the fastest
+time curl icanhazip.com;

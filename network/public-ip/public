@@ -1,0 +1,49 @@
+#!/bin/bash
+
+ERROR="-bash: public: command not found"
+error=0
+tmp=/var/tmp/tmp
+ip=icanhazip.com
+ptr=icanhazptr.com
+
+
+case "$2" in
+    traceroute)
+        if [ "$1" == "ip" ]; then
+            curl icanhaztraceroute.com
+            exit 0;
+        fi
+        error=1
+    ;;
+    "")
+    ;;
+    *)
+        error=1
+esac
+
+if [ $error == 1 ]; then
+    echo $ERROR
+    exit 0
+fi
+
+case "$1" in
+    ip)
+        curl icanhazip.com
+    ;;
+    ipv[46])
+        touch $tmp
+        curl -s --"$1" icanhazip.com -o $tmp
+        if [ -s $tmp ]; then
+            cat $tmp
+        else
+            echo "$1 is not support on your machine."
+        fi
+        rm $tmp
+    ;;
+    dns|rdns|ptr)
+        curl icanhazptr.com
+    ;;
+    *)
+        echo $ERROR
+esac
+exit 0
