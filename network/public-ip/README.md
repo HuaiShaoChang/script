@@ -6,7 +6,7 @@ Go to https://major.io/icanhazip-com-faq/ for more detail.
 ```bash=
 git clone http://github.com/HuaiShaoChang/script.git
 sudo cp script/network/public-ip/public /usr/bin/
-chmod a+x /usr/bin/public
+sudo chmod a+x /usr/bin/public
 ```
 ## Usages
 ### Get Public IP
