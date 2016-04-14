@@ -1,5 +1,7 @@
 Public IP Displayer
 =
+Linux Command Translator for icanhazip.com
+Go to https://major.io/icanhazip-com-faq/ for more detail.
 ## Installation
 ```bash=
 git clone http://github.com/HuaiShaoChang/script.git
