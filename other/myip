@@ -3,4 +3,11 @@
 # time wget http://ipecho.net/plain -O - -q; echo
 #time curl ipecho.net/plain; echo
 # the fastest
-time curl icanhazip.com;
+echo "curl icanhazip.com"; echo
+time curl icanhazip.com; echo
+
+echo "wget http://ipinfo.io/ip -qO -"; echo
+time wget http://ipinfo.io/ip -qO -; echo
+
+echo "dig +short myip.oopendns.com @resolver1.opendns.com"; echo
+time dig +short myip.opendns.com @resolver1.opendns.com; echo
