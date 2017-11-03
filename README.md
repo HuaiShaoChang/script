@@ -1,2 +1,2 @@
-# script
-Repository for bash script
+# scripts
+Repository for bash scripts.
